@@ -1,0 +1,40 @@
+footer {
+	background-color: $azul-oscuro;
+	color: $blanco;
+	padding-top: 2em;
+	padding-bottom: 2em;
+
+	.footer-container {
+		@media (max-width: 767px) {
+	        text-align: center;
+	    }
+	    
+		.enlace-contacto {
+			@include transition(color, 0.25s);
+
+			color: $blanco;
+			font-size: 2em;
+			padding-left: 0.2em;
+			padding-right: 0.2em;
+
+			&:hover {
+				color: $azul-seleccion;
+				text-decoration: none;
+			}
+		}
+
+	}
+
+	form {
+
+		textarea {
+			resize: none;
+		}
+
+		button {
+			cursor: pointer;
+			margin-top: 0em;
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,23 @@
+{
+  "acerca-de-mi": "Acerca de mí",
+  "aerohome.com": "Se deseaba un sitio web en el que se pudiera navegar por medio de un smartphone virtual para la empresa dedicada al diseño y construcción de casas inteligentes. En el proyecto se aprovechan las animaciones de Css 3 para las transiciones entre las pantallas del sitio web.",
+  "conocimientos": "Conocimientos",
+  "contacto": "Contacto",
+  "contactame": "¡Contáctame! Estaré atento a cualquier comentario que quieras hacerme.",
+  "correo": "Correo",
+  "descripcion-acerca-de-mi": "¡Hola! Soy un joven venezolano egresado de la Universidad Alejandro de Humboldt como Ingeniero en Informática. Actualmente me encuentro residenciado en Santiago de Chile. Tengo alrededor de dos años de experiencia en el desarrollo web, participando en el desarrollo de sitios web estáticos, dinámicos, aplicaciones web y videojuegos para el navegador. Soy autodidacta y creativo al momento de ofrecer soluciones tecnológicas. Mis pasatiempos: La programación y los videojuegos.",
+  "deseo-recibir-copia": "Deseo recibir una copia",
+  "diagnosticolorealprofessionnel.com": "La empresa necesitaba realizar una encuesta a sus clientes acerca del cuidado de su cabello en un evento presencial, utilizando una aplicación web desde sus smartphones. La aplicación ofreció una experiencia fluida a los usuarios, siendo una single-page application. El backend fue desarrollado en Php, manteniendo comunicación con el manejador de base de datos MySQL.",
+  "dualemento.com": "Soy co-creador de Dualemento, un equipo de freelancers donde compartimos y desarrollamos soluciones tecnológicas. El sitio web del equipo cuenta con nuestro logo interactivo en 3D con Three.js y fue construído bajo el framework de front-end MaterializeCSS.",
+  "enviar": "Enviar",
+  "error-campos-vacios": "Por favor, complete todos los campos.",
+  "error-correo-invalido": "Por favor, ingrese un correo válido.",
+  "error-inesperado": "Disculpe, ocurrió un error inesperado. Por favor, intente más tarde",
+  "idioma": "Idioma",
+  "mensaje": "Mensaje",
+  "mensaje-con-copia": "¡Gracias por contactarme! Responderé éste correo tan rápido sea posible.",
+  "mensaje-enviado": "¡El mensaje ha sido enviado!",
+  "mensaje-enviado-desde": "Mensaje enviado desde el sitio web keilermora.dualemento.com.",
+  "nombre": "Nombre",
+  "portafolios": "Portafolios"
+}

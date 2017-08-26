@@ -1,0 +1,23 @@
+{
+  "acerca-de-mi": "About me",
+  "aerohome.com": "It was wanted a website, where you could navigate throug a virtual smartphone for the company dedicated to design and build smart houses. There is a lot of Css 3 animations in this project used for the transitions between the website sections.",
+  "conocimientos": "Knowledges",
+  "contacto": "Contact",
+  "contactame": "Contact me! I would like to read anything than you want to tell me.",
+  "correo": "Email",
+  "descripcion-acerca-de-mi": "Hi! I'm an venezuelan youngster graduated from the Universidad Alejandro de Humboldt in Caracas as Informatic Engineering. I'm currently residing in Santiago de Chile. I have arround of two years of experience in web develpoment, taking part in static websites, dinamic websites, web apps and videogames development. I'm a self-taught person and creative featuring tech solutions. My hobbies: Programming and videogames.",
+  "deseo-recibir-copia": "I want to recieve a copy",
+  "diagnosticolorealprofessionnel.com": "The company wants to do a survey to their customers about taking care of their hair during a face-to-face event, using an web app throug their smartphones. The app offered an fluid user experience, because it was a single-page application. The back-end was written in Php and the database manager MySQL.",
+  "dualemento.com": "I'm the co-creator of a freelancers team called Dualemento, where we share and develop techonlogy solutions. The website have a 3D interactive logo of our team with Three.js, and was developed with the framework MaterializeCSS.",
+  "enviar": "Send",
+  "error-campos-vacios": "Please, complete all fields.",
+  "error-correo-invalido": "Please, enter a valid email",
+  "error-inesperado": "We're sorry, there was an unexpected error. Please, try again later.",
+  "idioma": "Language",
+  "mensaje": "Menssage",
+  "mensaje-con-copia": "Thank you for contact me! I will answer this email as fast as possible.",
+  "mensaje-enviado": "The message was sent!",
+  "mensaje-enviado-desde": "Message sent from the website keilermora.dualemento.com.",
+  "nombre": "Name",
+  "portafolios": "Briefcase"
+}

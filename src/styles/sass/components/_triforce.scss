@@ -1,0 +1,16 @@
+#svg-triforce {
+  @include transition(opacity, .5s);
+
+  cursor: pointer;
+  height: 2em;
+  opacity: 0.6;
+  width: 2em;
+
+  position: absolute;
+  bottom: 6px;
+  right: 20px;
+
+  &:hover {
+  	opacity: 1;
+  }
+}

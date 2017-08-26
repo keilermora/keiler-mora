@@ -1,0 +1,52 @@
+nav {
+  background-color: $azul-oscuro !important;
+  border: none !important;
+  color: $blanco;
+
+  li {
+    &.active a {
+      background-color: $azul-seleccion !important;
+    }
+
+    a {
+      @include transition(background-color, 0.25s);
+      color: $blanco !important;
+      text-align: center;
+
+      &:hover {
+        background-color: $azul-seleccion !important;
+      }
+    }
+  }
+
+
+  .dropdown {
+    background-color: $azul-oscuro;
+
+    &.open a {
+      background-color: $azul-seleccion !important;
+    }
+
+    .dropdown-menu {
+      background-color: $azul-seleccion !important;
+
+      a {
+        @include transition(background-color, 0.5s);
+        background-color: $azul-oscuro !important;
+        color: $blanco;
+
+        &:hover {
+          background-color: $azul-seleccion !important;
+        }
+      }
+    }
+  }
+
+  .navbar-toggle {
+    border: none;
+
+    .icon-bar {
+      background-color: $blanco !important;
+    }
+  }
+}

@@ -1,0 +1,167 @@
+//Transiciones
+body,
+.swiper-pagination-bullet,
+div.dia,
+div.noche {
+	@include transition(background-color, 1s);
+}
+
+h1.dia,
+h1.noche,
+h3.dia,
+h3.noche,
+span,
+p {
+	@include transition(color, 1s);
+}
+
+path,
+circle,
+g {
+	&.dia,
+	&.noche {
+		@include transition(fill, 1s);
+	}
+}
+
+//Colores
+body {
+	&.dia {
+		background-color: $body-dia;
+	}
+
+	&.noche {
+		background-color: $body-noche;
+	}
+}
+
+div {
+	&.dia {
+		background-color: $div-dia;
+	}
+
+	&.noche {
+		background-color: $div-noche;
+	}
+}
+
+h1, h2, h3, span, p {
+	&.dia {
+		color: $texto-dia;
+	}
+
+	&.noche {
+		color: $texto-noche;
+	}
+}
+
+#bitbucket-logo {
+	path.dia,
+	circle.dia {
+		fill: $azul-bitbucket;
+	}
+	path.noche,
+	circle.noche {
+		fill: $blanco;
+	}
+}
+
+#css3-logo {
+	path.dia {
+		fill: $texto-dia;
+	}
+	path.noche {
+		fill: $texto-noche;
+	}
+}
+
+#jquery-logo {
+
+	#jquery-subtitulo {
+		&.dia {
+			fill: $azul-oscuro-jquery;
+		}
+		&.noche {
+			fill: $blanco;
+		}
+	}
+
+	.jquery-logo {
+		&.dia {
+			fill: $azul-oscuro-jquery;
+		}
+		&.noche {
+			fill: $azul-claro-jquery;
+		}
+	}
+
+	.jquery-titulo {
+		&.dia {
+			fill: $gris-jquery;
+		}
+		&.noche {
+			fill: $blanco;
+		}
+	}
+}
+
+#mongodb-logo {
+	path.dia {
+		fill: $gris-mongodb;
+	}
+	path.noche {
+		fill: $blanco;
+	}
+}
+
+#nodejs-logo {
+
+	.nodejs-titulo {
+		&.dia {
+			fill: $gris-nodejs;
+		}
+		&.noche {
+			fill: $blanco;
+		}
+	}
+}
+
+#sass-logo {
+	path.dia {
+		fill: $rosado-sass;
+	}
+	path.noche {
+		fill: $blanco;
+	}
+}
+
+#wordpress-logo {
+	g.dia {
+		fill: $gris-wordpress;
+	}
+	g.noche {
+		fill: $azul-wordpress;
+	}
+}
+
+.swiper-pagination  {
+	&.dia .swiper-pagination-bullet {
+		background-color: $negro;
+	}
+	&.noche .swiper-pagination-bullet {
+		background-color: $blanco;        
+	}
+}
+
+.claro.dia {
+	display: inline;
+}
+.claro.noche {
+	display: none;
+}
+.oscuro.dia {
+	display: none;
+}
+.oscuro.noche {
+	display: inline;
+}

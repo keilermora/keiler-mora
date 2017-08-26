@@ -1,0 +1,129 @@
+/**
+ * Sección Home
+ */
+section {
+
+	padding-top: 6em;
+	padding-bottom: 2em;
+
+	@media (max-width: 767px) {
+		padding-top: 2em;
+	}
+
+	&#section-inicio {
+
+		h1 {
+			margin-bottom: 0.5em;
+			@media (max-width: 767px) {
+				margin-top: 1rem;
+			}
+		}
+
+		div#acerca-de-mi {
+			padding: 1.5em 1.5em 1em;
+		}
+	}
+
+	&#section-conocimientos {
+
+		.conocimientos-logos-container {
+			@include vertical-align(center);
+
+			height: 5em;
+			margin-top: 2em;
+
+			@media (max-width: 767px) {
+				display: -webkit-flex; /* Safari */
+			    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+			    display: flex;
+			    flex-wrap: wrap;
+			    margin-top: 0rem;
+			    height: auto;
+			}
+
+			svg {
+				@include transition(max-height, 0.25s);
+				cursor: pointer;
+				height: 100%;
+				padding-left: 0.15em;
+				padding-right: 0.15em;
+				max-height: 3.5em !important;
+
+				@media (max-width: 767px) {
+					margin: 0.5rem;
+				}
+
+				&:hover {
+					max-height: 5em !important;
+
+					@media (max-width: 767px) {
+						max-height: 3.5em !important;
+					}
+				}
+			}
+		}
+
+		#conocimientos-detalles {
+			font-size: 1.2em;
+			margin-top: 2em;
+			min-height: 2.51em;
+			padding: 0.5em 0em;
+
+			#etiqueta {
+				font-family: $titulo;
+				opacity: 0;
+			}
+		}
+	}
+
+	&#section-portafolios {
+		padding-bottom: 3em;
+
+		.portafolio-imagen {
+
+			img {
+				height: auto;
+
+				@media (max-width: 991px) {
+					width: 28rem;
+				}
+			}
+        }
+
+        .portafolio-detalles {
+        	@include vertical-align(center);
+            height: 21.1em;
+            padding: 1em 1em 0.5em;
+
+		    @media (min-width: 992px) and (max-width: 1199px) {
+		        height: 22.8rem;
+		    }
+
+		    @media (min-width: 768px) and (max-width: 991px) {
+		        height: 13.3rem;
+		    }
+
+		    @media (max-width: 767px) {
+		        height: auto;
+		    }
+
+            .portafolio-titulo {
+            	font-family: $titulo;
+            	font-size: 2.2rem;
+            }
+
+            a {
+            	@include transition(color, 0.25s);
+            	display: inline-block;
+
+            	&:hover {
+            		text-decoration: none;
+            	}
+            }
+
+            .portafolio-descripcion {
+            	margin-top: 1em;
+            }
+        }
+	}
+}
