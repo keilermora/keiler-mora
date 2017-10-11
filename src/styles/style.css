@@ -9,8 +9,16 @@ body {
   overflow-x: hidden; }
 
 button {
+  -o-transition: background-color 0.5s;
+  -ms-transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
   background-color: #0288d1 !important;
   margin-top: 1em; }
+  button:hover {
+    background-color: #fff !important;
+    color: #0288d1 !important; }
 
 footer {
   background-color: #00334d;
@@ -246,14 +254,6 @@ h1.dia, h2.dia, h3.dia, span.dia, p.dia {
 
 h1.noche, h2.noche, h3.noche, span.noche, p.noche {
   color: #fff; }
-
-#bitbucket-logo path.dia,
-#bitbucket-logo circle.dia {
-  fill: #172b4d; }
-
-#bitbucket-logo path.noche,
-#bitbucket-logo circle.noche {
-  fill: #fff; }
 
 #css3-logo path.dia {
   fill: #000; }

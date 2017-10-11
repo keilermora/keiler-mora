@@ -63,9 +63,6 @@ if(
   $cuerpoMensaje .= 'Mensaje: '.$mensaje;
   $cuerpoMensaje .= '<br>';
 
-  /**
-   * @var string $conCopia Si el remitente lo desea, se hace envío de la copia del mensaje a su correo.
-   */
   if($_POST['cc']) {
     $encabezados .= 'CC: '.$nombreRemitente.' <'.$correoRemitente.'>\r\n';
     $cuerpoMensaje .= '<h4>'.$traductor['mensaje-con-copia'].'</h4>';

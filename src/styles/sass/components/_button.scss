@@ -1,4 +1,11 @@
 button {
-	background-color: #0288d1 !important;
-	margin-top: 1em;
+  @include transition(background-color, 0.5s);
+  background-color: #0288d1 !important;
+  margin-top: 1em;
+
+  &:hover {
+
+    background-color: #fff !important;
+    color: #0288d1 !important;
+  }
 }

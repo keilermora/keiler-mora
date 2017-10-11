@@ -26,8 +26,8 @@ function mostrarMensaje(mensaje, clase) {
   }
   else {
     $('.alert').removeClass('alert-danger')
-               .removeClass('alert-success')
-               .addClass(clase);
+     .removeClass('alert-success')
+     .addClass(clase);
   }
 
   //Cargar JSON del idioma y traducir el mensaje
@@ -58,15 +58,18 @@ $(document).ready(function() {
    * Iniciar el slider
    */
   var mySwiper = new Swiper ('.swiper-container', {
-    loop: true,
     speed: 800,
-    autoplay: 5000,
+    loop: true,
+    lazy: true,
     effect: 'coverflow',
-    pagination: '.swiper-pagination',
-    paginationClickable: true,
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
-    lazyLoading: true
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
   });
 
   /**

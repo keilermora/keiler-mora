@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var gulp        = require('gulp'),
     bytediff    = require('gulp-bytediff'),
@@ -15,44 +15,50 @@ var gulp        = require('gulp'),
     uglifycss   = require('gulp-uglifycss');
 
 function calculateDataSavings(data) {
+
+  var message = '';
+
   if(data.savings == 0) {
-    return data.fileName + ' sin cambios.';
+
+    message = data.fileName + ' sin cambios.';
   }
   else {
     var startSize = (data.startSize / 1024).toFixed(3);
     var endSize = (data.endSize / 1024).toFixed(3);
     var percent = (100 - data.percent * 100).toFixed(2);
-
     var difference = (data.savings > 0) ? 'disminuyó' : 'aumentó';
-    return data.fileName + ' ' + difference + ' ' + percent + '% (De ' + startSize + 'kb a ' + endSize + 'kb)';
+
+    message = data.fileName + ' ' + difference + ' ' + percent + '% (De ' + startSize + 'kb a ' + endSize + 'kb)';
   }
+
+  return message;
 }
 
 const styles = [
-  './bower_components/components-font-awesome/css/font-awesome.min.css',
-  './bower_components/bootstrap/dist/css/bootstrap.min.css',
-  './bower_components/swiper/dist/css/swiper.min.css',
+  './node_modules/font-awesome/css/font-awesome.min.css',
+  './node_modules/bootstrap/dist/css/bootstrap.min.css',
+  './node_modules/swiper/dist/css/swiper.min.css',
   './src/styles/*.css'
 ];
 
 const scripts = {
   todos: [
-    './bower_components/jquery/dist/jquery.min.js',
-    './bower_components/bootstrap/dist/js/bootstrap.min.js',
-    './bower_components/particles.js/particles.min.js',
-    './bower_components/swiper/dist/js/swiper.jquery.min.js',
+    './node_modules/jquery/dist/jquery.min.js',
+    './node_modules/bootstrap/dist/js/bootstrap.min.js',
+    './node_modules/particlesjs/dist/particles.min.js',
+    './node_modules/swiper/dist/js/swiper.min.js',
     './src/scripts/index.js'
   ],
   TweenMax: [
-    './bower_components/gsap/src/minified/TweenLite.min.js',
-    './bower_components/gsap/src/minified/easing/EasePack.min.js',
-    './bower_components/gsap/src/minified/plugins/CSSPlugin.min.js',
-    './bower_components/gsap/src/minified/plugins/ScrollToPlugin.min.js'
+    './node_modules/gsap/src/minified/TweenLite.min.js',
+    './node_modules/gsap/src/minified/easing/EasePack.min.js',
+    './node_modules/gsap/src/minified/plugins/CSSPlugin.min.js',
+    './node_modules/gsap/src/minified/plugins/ScrollToPlugin.min.js'
   ]
 };
 
 const fonts = [
-  './bower_components/components-font-awesome/fonts/**/*'
+  './node_modules/font-awesome/fonts/**/*'
 ];
 
 /**

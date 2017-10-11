@@ -43,13 +43,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merienda+One|Ubuntu">
 
     <!-- build:css styles/bootstrap.min.css -->
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <!-- /build -->
     <!-- build:css styles/font-awesome.min.css -->
-    <link rel="stylesheet" href="../bower_components/components-font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
     <!-- /build -->
     <!-- build:css styles/swiper.min.css -->
-    <link rel="stylesheet" href="../bower_components/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../node_modules/swiper/dist/css/swiper.min.css">
     <!-- /build -->
     <link rel="stylesheet" href="styles/style.css">
   </head>
@@ -149,9 +149,8 @@
 
         <!-- Logos que representan los conocimientos -->
         <div class="conocimientos-logos-container text-center">
-          <?php include_once('images/bitbucket.svg') ?>
+          <?php echo file_get_contents('images/angular.svg') ?>
           <?php echo file_get_contents('images/bootstrap.svg') ?>
-          <?php echo file_get_contents('images/bower.svg') ?>
           <?php include_once('images/css3.svg') ?>
           <?php echo file_get_contents('images/git.svg') ?>
           <?php echo file_get_contents('images/gulp.svg') ?>
@@ -175,6 +174,7 @@
           <?php echo file_get_contents('images/php.svg') ?>
           <?php echo file_get_contents('images/python.svg') ?>
           <?php echo file_get_contents('images/react.svg') ?>
+          <?php echo file_get_contents('images/redux.svg') ?>
           <?php echo file_get_contents('images/ruby.svg') ?>
           <?php include_once('images/sass.svg') ?>
           <?php include_once('images/wordpress.svg') ?>
@@ -191,6 +191,26 @@
         <div class="swiper-container">
           <div class="swiper-wrapper">
             <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-4 col-md-5 col-lg-6 portafolio-imagen">
+                    <img class="img-responsive center-block" src="images/aliciatorres.png">
+                  </div>
+                  <div class="col-xs-12 col-sm-8 col-md-7 col-lg-6 portafolio-detalles text-center <?php echo $h ?>">
+                    <div>
+                      <span class="portafolio-titulo">Libros Favoritos de Alicia</span><br>
+                      <small><a class="portafolio-enlace" href="http://aliciatorres.dualemento.com" target="_blank">aliciatorres.com</a></small>
+                      <div class="portafolio-descripcion">
+                        <p class="hidden-xs hidden-sm traducir" data-key="aerohome.com">
+                          <?php echo $t['aliciatorres.com'] ?>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="swiper-slide">
               <div class="container">
                 <div class="row">
@@ -326,14 +346,14 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-lg-3 col-md-4">
-                    <button type="submit" id="btn-enviar" class="btn btn-primary traducir" data-key="enviar"><?php echo $t['enviar'] ?></button>
-                  </div>
                   <div class="col-lg-9 col-md-8">
                     <label class="form-check-label">
                       <input id="cc" type="checkbox" class="form-check-input">
                       <span class="traducir" data-key="deseo-recibir-copia"><?php echo $t['deseo-recibir-copia'] ?></span>
                     </label>
+                  </div>
+                  <div class="col-lg-3 col-md-4">
+                    <button type="submit" id="btn-enviar" class="btn btn-primary traducir" data-key="enviar"><?php echo $t['enviar'] ?></button>
                   </div>
                 </div>
               </div>
@@ -347,23 +367,23 @@
     <div class="alert" role="alert"></div>
 
     <!-- build:js scripts/jquery.min.js -->
-    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <!-- /build -->
 
     <!-- build:js scripts/bootstrap.min.js -->
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- /build -->
     <!-- build:js scripts/particles.min.js -->
-    <script src="../bower_components/particles.js/particles.min.js"></script>
+    <script src="../node_modules/particlesjs/dist/particles.min.js"></script>
     <!-- /build -->
-    <!-- build:js scripts/swiper.jquery.min.js -->
-    <script src="../bower_components/swiper/dist/js/swiper.jquery.min.js"></script>
+    <!-- build:js scripts/swiper.min.js -->
+    <script src="../node_modules/swiper/dist/js/swiper.min.js"></script>
     <!-- /build -->
     <!-- build:js scripts/TweenMax.min.js -->
-    <script src="../bower_components/gsap/src/minified/TweenLite.min.js"></script>
-    <script src="../bower_components/gsap/src/minified/easing/EasePack.min.js"></script>
-    <script src="../bower_components/gsap/src/minified/plugins/CSSPlugin.min.js"></script>
-    <script src="../bower_components/gsap/src/minified/plugins/ScrollToPlugin.min.js"></script>
+    <script src="../node_modules/gsap/src/minified/TweenLite.min.js"></script>
+    <script src="../node_modules/gsap/src/minified/easing/EasePack.min.js"></script>
+    <script src="../node_modules/gsap/src/minified/plugins/CSSPlugin.min.js"></script>
+    <script src="../node_modules/gsap/src/minified/plugins/ScrollToPlugin.min.js"></script>
     <!-- /build -->
 
     <script src="scripts/index.js"></script>

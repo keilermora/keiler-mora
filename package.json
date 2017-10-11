@@ -1,11 +1,8 @@
 {
   "name": "keiler-mora-v2",
   "version": "2.0.0",
-  "description": "Versión web del currículum web",
+  "description": "Versión web de mi currículum vitae",
   "main": "gulpfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/keilermora/keiler-mora-v2.git"
@@ -30,5 +27,13 @@
     "gulp-util": "^3.0.7",
     "pump": "^1.0.2",
     "run-sequence": "^1.2.2"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "gsap": "^1.20.3",
+    "jquery": "^3.2.1",
+    "particlesjs": "^2.0.2",
+    "swiper": "^4.0.1"
   }
 }
