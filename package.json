@@ -1,18 +1,18 @@
 {
-  "name": "keiler-mora-v2",
+  "name": "keiler-mora",
   "version": "2.0.0",
   "description": "Versión web de mi currículum vitae",
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/keilermora/keiler-mora-v2.git"
+    "url": "git+https://github.com/keilermora/keiler-mora.git"
   },
   "author": "Keiler Mora",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/keilermora/keiler-mora-v2/issues"
+    "url": "https://github.com/keilermora/keiler-mora/issues"
   },
-  "homepage": "https://github.com/keilermora/keiler-mora-v2#readme",
+  "homepage": "https://github.com/keilermora/keiler-mora#readme",
   "devDependencies": {
     "del": "^2.2.2",
     "gulp": "^3.9.1",
