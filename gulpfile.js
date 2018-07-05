@@ -176,10 +176,6 @@ gulp.task('copy-main-files', function() {
     gulp.dest('./dist/locales')]);
 
   pump([
-    gulp.src(['./src/particles/*.json']),
-    gulp.dest('./dist/particles')]);
-
-  pump([
     gulp.src(['./src/sounds/*.wav']),
     gulp.dest('./dist/sounds')]);
 });

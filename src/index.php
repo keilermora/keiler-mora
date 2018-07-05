@@ -373,9 +373,6 @@
     <!-- build:js scripts/bootstrap.min.js -->
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- /build -->
-    <!-- build:js scripts/particles.min.js -->
-    <script src="../node_modules/particlesjs/dist/particles.min.js"></script>
-    <!-- /build -->
     <!-- build:js scripts/swiper.min.js -->
     <script src="../node_modules/swiper/dist/js/swiper.min.js"></script>
     <!-- /build -->

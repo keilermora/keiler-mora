@@ -100,22 +100,10 @@ $(document).ready(function() {
       //Si es de día, cambiar a noche
       if( $('body').hasClass('dia') ) {
         $('.dia').removeClass('dia').addClass('noche');
-
-        //Ocultar nubes
-        TweenLite.to('#particles-nubes', 1.5, { opacity: 0 });
-
-        //Mostrar estrellas
-        TweenLite.to('#particles-estrellas', 1.5, { opacity: 1 });
       }
       //Si es de noche, cambiar a día
       else {
         $('.noche').removeClass('noche').addClass('dia');
-
-        //Mostrar nubes
-        TweenLite.to('#particles-nubes', 1.5, { opacity: 1 });
-
-        //Ocultar estrellas
-        TweenLite.to('#particles-estrellas', 1.5, { opacity: 0 });
       }
 
       g_cambiandoHorario = false;

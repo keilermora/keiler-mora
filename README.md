@@ -17,7 +17,6 @@ Segunda versión web de mi currículum vitae. Ha pasado aproximadamente dos año
 * [Font Awesome](http://fontawesome.io/) - The iconic font and CSS toolkit
 * [GSAP](https://greensock.com/gsap) - The new standard for HTML5 and javascript animation
 * [jQuery](https://jquery.com/) - Write less, do more
-* [Particles.js](http://vincentgarreau.com/particles.js/) - Lightweight JavaScript library for creating particles
 * [Swiper](http://idangero.us/swiper/) - Most Modern Mobile Touch Slider
 
 ### Construir la versión de desarrollo
