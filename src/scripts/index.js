@@ -87,8 +87,9 @@ $(document).ready(function() {
     e.preventDefault();
     var href = $(this).attr('href');
 
-    if(href !== undefined) {
+    if(href) {
       TweenLite.to(window, 1, {scrollTo: href });
+      $('#navbar-collapse').collapse('hide');
     }
   });
 
