@@ -87,6 +87,8 @@ nav {
     border: none; }
     nav .navbar-toggle .icon-bar {
       background-color: #fff !important; }
+    nav .navbar-toggle:hover .icon-bar, nav .navbar-toggle:active .icon-bar, nav .navbar-toggle:focus .icon-bar {
+      background-color: #0288d1 !important; }
 
 p {
   text-align: justify;

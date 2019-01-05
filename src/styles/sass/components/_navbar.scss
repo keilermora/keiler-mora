@@ -48,5 +48,13 @@ nav {
     .icon-bar {
       background-color: $blanco !important;
     }
+
+    &:hover,
+    &:active,
+    &:focus {
+      .icon-bar {
+        background-color: $azul-seleccion !important;
+      }
+    }
   }
 }
