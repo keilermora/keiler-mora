@@ -96,12 +96,6 @@ p {
       text-align: center;
       text-indent: 0em; } }
 
-.particles-js {
-  height: 100vh;
-  position: fixed;
-  width: 100vw;
-  z-index: -1; }
-
 .swiper-container {
   width: 100%;
   height: 28em; }
@@ -361,7 +355,7 @@ section {
         display: flex;
         flex-wrap: wrap;
         margin-top: 0rem;
-        height: auto; } }
+        height: 100%; } }
     section#section-conocimientos .conocimientos-logos-container svg {
       -o-transition: max-height 0.25s;
       -ms-transition: max-height 0.25s;
