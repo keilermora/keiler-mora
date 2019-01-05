@@ -2,7 +2,12 @@
   /**
    * Detectar el idioma del navegador
    */
-  $idioma_navegador = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+  $idioma_navegador = '';
+
+  if(isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
+    $idioma_navegador = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+  }
+
   /**
    * Establecer el idioma del sitio web
    */
