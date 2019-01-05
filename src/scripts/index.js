@@ -243,5 +243,5 @@ $(document).ready(function() {
   });
 
   //Escribir mensaje en consola
-  console.log("%c¡Hola! Te estaba esperando. Si deseas ver el código fuente con fines evaluativos o simple curiosidad, visita https://github.com/keilermora/keiler-mora-v2", "font-family: 'Arial'; font-size: 16px");
+  console.log("%c¡Hola! Si deseas ver el código fuente con fines evaluativos o por curiosidad, visita https://github.com/keilermora/keiler-mora", "font-family: 'Arial'; font-size: 16px");
 });
