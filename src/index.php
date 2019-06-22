@@ -303,14 +303,14 @@
           <div class="col-md-6">
             <div class="container-fluid">
               <div class="row">
-                <div class="col-sm-* footer-container">
+                <div class="col-xs-12 footer-container">
                   <span class="traducir" data-key="contactame">
                     <?php echo $t['contactame'] ?>
                   </span>
                 </div>
               </div>
               <div class="row">
-                <div class="col-sm-* footer-container">
+                <div class="col-xs-12 footer-container">
                   <a class="enlace-contacto" href="https://www.facebook.com/keilermora" target="_blank">
                     <i class="fa fa-facebook-official" aria-hidden="true"></i>
                   </a>
