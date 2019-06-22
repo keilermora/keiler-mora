@@ -183,6 +183,7 @@
           <?php echo file_get_contents('images/redux.svg') ?>
           <?php echo file_get_contents('images/ruby.svg') ?>
           <?php include_once('images/sass.svg') ?>
+          <?php include_once('images/webpack.svg') ?>
           <?php include_once('images/wordpress.svg') ?>
         </div>
       </section>
