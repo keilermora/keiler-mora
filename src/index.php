@@ -154,6 +154,7 @@
 
         <!-- Logos que representan los conocimientos -->
         <div class="conocimientos-logos-container text-center">
+          <?php echo file_get_contents('images/angularjs.svg') ?>
           <?php echo file_get_contents('images/angular.svg') ?>
           <?php echo file_get_contents('images/bootstrap.svg') ?>
           <?php include_once('images/css3.svg') ?>
