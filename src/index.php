@@ -163,8 +163,6 @@
           <?php echo file_get_contents('images/html5.svg') ?>
           <?php echo file_get_contents('images/javascript.svg') ?>
           <?php include_once('images/jquery.svg') ?>
-          <?php echo file_get_contents('images/json.svg') ?>
-          <?php echo file_get_contents('images/materializecss.svg') ?>
         </div>
 
         <!-- Texto de detalles de los conocimientos -->
@@ -174,14 +172,12 @@
 
         <!-- Más logos que representan los conocimientos -->
         <div class="conocimientos-logos-container text-center">
-          <?php include_once('images/mongodb.svg') ?>
+          <?php echo file_get_contents('images/json.svg') ?>
+          <?php echo file_get_contents('images/materializecss.svg') ?>
           <?php echo file_get_contents('images/mysql.svg') ?>
-          <?php include_once('images/nodejs.svg') ?>
           <?php echo file_get_contents('images/php.svg') ?>
-          <?php echo file_get_contents('images/python.svg') ?>
           <?php echo file_get_contents('images/react.svg') ?>
           <?php echo file_get_contents('images/redux.svg') ?>
-          <?php echo file_get_contents('images/ruby.svg') ?>
           <?php include_once('images/sass.svg') ?>
           <?php include_once('images/webpack.svg') ?>
           <?php include_once('images/wordpress.svg') ?>
