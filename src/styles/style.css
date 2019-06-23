@@ -43,6 +43,9 @@ footer {
       text-decoration: none; }
   footer form textarea {
     resize: none; }
+  footer form label {
+    font-weight: normal;
+    vertical-align: text-top; }
   footer form button {
     cursor: pointer;
     margin-top: 0em;
@@ -357,7 +360,7 @@ section {
         display: flex;
         flex-wrap: wrap;
         margin-top: 0rem;
-        height: 100%; } }
+        height: 264px; } }
     section#section-conocimientos .conocimientos-logos-container svg {
       -o-transition: max-height 0.25s;
       -ms-transition: max-height 0.25s;
