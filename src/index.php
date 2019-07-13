@@ -12,6 +12,7 @@
    * Establecer el idioma del sitio web
    */
   $idioma = $idioma_navegador == 'en' ? 'en' : 'es';
+
   /**
    * Cargar el archivo json con el idioma
    */
@@ -29,12 +30,7 @@
    * @var $h Horario
    */
   $hora_servidor = getdate()['hours'];
-  if($hora_servidor >=6 && $hora_servidor <= 18) {
-    $h = 'dia';
-  }
-  else {
-    $h = 'noche';
-  }
+  $h = ($hora_servidor >=6 && $hora_servidor <= 18) ? 'dia' : 'noche';
 ?>
 
 <!DOCTYPE html>
@@ -42,11 +38,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
-    <title>Keiler Mora: Desarrollador Web</title>
+    <title>Keiler Mora | Desarrollador Web</title>
 
     <!-- Fuentes -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merienda+One|Ubuntu">
-
     <!-- build:css styles/bootstrap.min.css -->
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <!-- /build -->
@@ -58,7 +53,7 @@
     <!-- /build -->
     <link rel="stylesheet" href="styles/style.css">
   </head>
-  <body class="<?php echo $h ?>" data-spy="scroll" data-target=".navbar" data-offset="300">
+  <body class="day" data-spy="scroll" data-target=".navbar" data-offset="300">
     <!-- Google analytics -->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -73,7 +68,6 @@
     <!-- Navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
@@ -134,8 +128,8 @@
 
             <!-- Decripción acerca de mi -->
             <div class="col-xs-* col-md-9">
-              <h1 class="text-center <?php echo $h ?>">Keiler Mora</h1>
-              <div id="acerca-de-mi" class="<?php echo $h ?>">
+              <h1 class="text-center day">Keiler Mora</h1>
+              <div id="acerca-de-mi" class="day">
                 <p class="traducir" data-key="descripcion-acerca-de-mi">
                   <?php echo $t['descripcion-acerca-de-mi'] ?>
                 </p>
@@ -150,7 +144,7 @@
       <section id="section-conocimientos">
 
         <!-- Título de la sección conocimientos -->
-        <h1 class="text-center traducir <?php echo $h ?>" data-key="conocimientos"><?php echo $t['conocimientos'] ?></h1>
+        <h1 class="text-center traducir day" data-key="conocimientos"><?php echo $t['conocimientos'] ?></h1>
 
         <!-- Logos que representan los conocimientos -->
         <div class="conocimientos-logos-container text-center">
@@ -166,7 +160,7 @@
         </div>
 
         <!-- Texto de detalles de los conocimientos -->
-        <div id="conocimientos-detalles" class="<?php echo $h ?> container-fluid text-center hidden-xs">
+        <div id="conocimientos-detalles" class="day container-fluid text-center hidden-xs">
           <span id="etiqueta"></span>
         </div>
 
@@ -188,7 +182,7 @@
       <section id="section-portafolios">
 
         <!-- Título de la sección portafolios -->
-        <h1 class="text-center traducir <?php echo $h ?>" data-key="portafolios"><?php echo $t['portafolios'] ?></h1>
+        <h1 class="text-center traducir day" data-key="portafolios"><?php echo $t['portafolios'] ?></h1>
 
         <!-- Slider con los trabajos más destacados -->
         <div class="swiper-container">
@@ -200,7 +194,7 @@
                   <div class="col-xs-12 col-sm-4 col-md-5 col-lg-6 portafolio-imagen">
                     <img class="img-responsive center-block" src="images/aliciatorres.png">
                   </div>
-                  <div class="col-xs-12 col-sm-8 col-md-7 col-lg-6 portafolio-detalles text-center <?php echo $h ?>">
+                  <div class="col-xs-12 col-sm-8 col-md-7 col-lg-6 portafolio-detalles text-center day">
                     <div>
                       <span class="portafolio-titulo">Libros Favoritos de Alicia</span><br>
                       <small><a class="portafolio-enlace" href="http://aliciatorres.dualemento.com" target="_blank">aliciatorres.com</a></small>
@@ -220,7 +214,7 @@
                   <div class="col-xs-12 col-sm-4 col-md-5 col-lg-6 portafolio-imagen">
                     <img class="img-responsive center-block" src="images/dualemento.png">
                   </div>
-                  <div class="col-xs-12 col-sm-8 col-md-7 col-lg-6 portafolio-detalles text-center <?php echo $h ?>">
+                  <div class="col-xs-12 col-sm-8 col-md-7 col-lg-6 portafolio-detalles text-center day">
                     <div>
                       <span class="portafolio-titulo">Dualemento</span><br>
                       <small><a href="http://dualemento.com" target="_blank">dualemento.com</a></small>
@@ -240,7 +234,7 @@
                   <div class="col-xs-12 col-sm-4 col-md-5 col-lg-6 portafolio-imagen">
                     <img class="img-responsive center-block" src="images/aerohome.png">
                   </div>
-                  <div class="col-xs-12 col-sm-8 col-md-7 col-lg-6 portafolio-detalles text-center <?php echo $h ?>">
+                  <div class="col-xs-12 col-sm-8 col-md-7 col-lg-6 portafolio-detalles text-center day">
                     <div>
                       <span class="portafolio-titulo">Aerohome</span><br>
                       <small><a class="portafolio-enlace" href="http://aerohome.dualemento.com" target="_blank">aerohome.com</a></small>
@@ -260,7 +254,7 @@
                   <div class="col-xs-12 col-sm-4 col-md-5 col-lg-6 portafolio-imagen">
                     <img class="img-responsive center-block" src="images/diagnostico-loreal-professionnel.png">
                   </div>
-                  <div class="col-xs-12 col-sm-8 col-md-7 col-lg-6  portafolio-detalles text-center <?php echo $h ?>">
+                  <div class="col-xs-12 col-sm-8 col-md-7 col-lg-6  portafolio-detalles text-center day">
                     <div>
                       <span class="portafolio-titulo">Diagnostico L'Oréal</span><br>
                       <small><a href="http://diagnosticolorealprofessionnel.dualemento.com" target="_blank">diagnosticolorealprofessionnel.com</a></small>
@@ -277,16 +271,16 @@
           </div>
 
           <!-- Paginación -->
-          <div class="swiper-pagination <?php echo $h ?>"></div>
+          <div class="swiper-pagination day"></div>
           
           <!-- Botones de paginación -->
           <div class="swiper-button-prev hidden-xs hidden-sm">
-            <span class="<?php echo $h ?>">
+            <span class="day">
               <i class="fa fa-caret-left" aria-hidden="true"></i>
             </span>
           </div>
           <div class="swiper-button-next hidden-xs hidden-sm">
-            <span class="<?php echo $h ?>">
+            <span class="day">
               <i class="fa fa-caret-right" aria-hidden="true"></i>
             </span>
           </div>
@@ -372,7 +366,6 @@
     <!-- build:js scripts/jquery.min.js -->
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <!-- /build -->
-
     <!-- build:js scripts/bootstrap.min.js -->
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- /build -->
