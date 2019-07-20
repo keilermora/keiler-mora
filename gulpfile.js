@@ -1,36 +1,30 @@
 'use strict';
 
-var gulp        = require('gulp'),
-    bytediff    = require('gulp-bytediff'),
-    concat      = require('gulp-concat'),
-    del         = require('del'),
-    gutil       = require('gulp-util'),
-    imagemin    = require('gulp-imagemin'),
-    processhtml = require('gulp-processhtml'),
-    pump        = require('pump'),
-    runSequence = require('run-sequence'),
-    sass        = require('gulp-sass'),
-    strip       = require('gulp-strip-comments'),
-    uglify      = require('gulp-uglify'),
-    uglifycss   = require('gulp-uglifycss');
+const { dest, src, task, watch } = require('gulp'),
+  { colors, log } = require('gulp-util'),
+  bytediff    = require('gulp-bytediff'),
+  concat      = require('gulp-concat'),
+  del         = require('del'),
+  imagemin    = require('gulp-imagemin'),
+  processhtml = require('gulp-processhtml'),
+  pump        = require('pump'),
+  runSequence = require('run-sequence'),
+  sass        = require('gulp-sass'),
+  strip       = require('gulp-strip-comments'),
+  uglify      = require('gulp-uglify'),
+  uglifycss   = require('gulp-uglifycss');
 
 function calculateDataSavings(data) {
-
-  var message = '';
-
-  if(data.savings == 0) {
-
-    message = data.fileName + ' sin cambios.';
+  let message = '';
+  if(data.savings === 0) {
+    message = `${data.fileName} sin cambios.`;
+  } else {
+    const startSize = (data.startSize / 1024).toFixed(3);
+    const endSize = (data.endSize / 1024).toFixed(3);
+    const percent = (100 - data.percent * 100).toFixed(2);
+    const difference = (data.savings > 0) ? 'disminuyó' : 'aumentó';
+    message = `${data.fileName} ${difference} ${percent}% (De ${startSize}kb a ${endSize}kb)`;
   }
-  else {
-    var startSize = (data.startSize / 1024).toFixed(3);
-    var endSize = (data.endSize / 1024).toFixed(3);
-    var percent = (100 - data.percent * 100).toFixed(2);
-    var difference = (data.savings > 0) ? 'disminuyó' : 'aumentó';
-
-    message = data.fileName + ' ' + difference + ' ' + percent + '% (De ' + startSize + 'kb a ' + endSize + 'kb)';
-  }
-
   return message;
 }
 
@@ -63,7 +57,7 @@ const fonts = [
 /**
  * Construir el proyecto
  */
-gulp.task('build', function() {
+task('build', function() {
   runSequence(
     'clean-build', // Limpiar directorio dist
     'convert-sass', // Copiar y convertir SASS a CSS
@@ -79,118 +73,118 @@ gulp.task('build', function() {
 /**
  * Limpiar directorio dist
  */
-gulp.task('clean-build', function() {
+task('clean-build', function() {
   del('./dist');
 });
 
 /**
  * Copiar y convertir SASS a CSS
  */
-gulp.task('convert-sass', function(cb) {
+task('convert-sass', function(cb) {
   pump([
-    gulp.src('./src/styles/sass/style.scss'),
+    src('./src/styles/sass/style.scss'),
     sass().on('error', sass.logError),
-    gulp.dest('./src/styles')], cb);
+    dest('./src/styles')], cb);
 });
 
 /**
  * Comprimir y copiar CSS
  */
-gulp.task('compress-css', function(cb) {
+task('compress-css', function(cb) {
   pump([
-    gulp.src(styles),
+    src(styles),
     bytediff.start(),
     uglifycss(),
     bytediff.stop(function(data) { return calculateDataSavings(data); }),
-    gulp.dest('./dist/styles')], cb);
+    dest('./dist/styles')], cb);
 });
 
 /**
  * Comprimir y copiar JS
  */
-gulp.task('compress-js', function() {
+task('compress-js', function() {
   pump([
-    gulp.src(scripts.todos),
+    src(scripts.todos),
     bytediff.start(),
     uglify(),
     strip(),
     bytediff.stop(function(data) { return calculateDataSavings(data); }),
-    gulp.dest('./dist/scripts')]);
+    dest('./dist/scripts')]);
 
   pump([
-    gulp.src(scripts.TweenMax),
+    src(scripts.TweenMax),
     bytediff.start(),
     uglify(),
     strip(),
     bytediff.stop(function(data) { return calculateDataSavings(data); }),
     concat('TweenMax.min.js'),
-    gulp.dest('./dist/scripts')]);
+    dest('./dist/scripts')]);
 });
 
 /**
  * Comprimir y copiar imágenes
  */
-gulp.task('compress-images', function(cb) {
+task('compress-images', function(cb) {
   pump([
-    gulp.src(['./src/images/*', '!./src/images/*.svg']),
+    src(['./src/images/*', '!./src/images/*.svg']),
     bytediff.start(),
     imagemin(),
     bytediff.stop(function(data) { return calculateDataSavings(data); }),
-    gulp.dest('./dist/images')], cb);
+    dest('./dist/images')], cb);
 });
 
-gulp.task('copy-fonts', function(cb) {
-  pump([gulp.src(fonts), gulp.dest('./dist/fonts')], cb);
+task('copy-fonts', function(cb) {
+  pump([src(fonts), dest('./dist/fonts')], cb);
 });
 
 /**
  * Procesar y copiar html
  */
-gulp.task('process-html', function(cb) {
+task('process-html', function(cb) {
   pump([
-    gulp.src(['./src/*.index']),
+    src(['./src/*.index']),
     processhtml(),
     strip(),
-    gulp.dest('./dist')], cb);
+    dest('./dist')], cb);
 });
 
 /**
  * Copiar los archivos que no requieren ser procesados
  */
-gulp.task('copy-main-files', function() {
+task('copy-main-files', function() {
   pump([
-    gulp.src(['./src/locales/*.json']),
-    gulp.dest('./dist/locales')]);
+    src(['./src/locales/*.json']),
+    dest('./dist/locales')]);
 
   pump([
-    gulp.src(['./src/sounds/*.wav']),
-    gulp.dest('./dist/sounds')]);
+    src(['./src/sounds/*.wav']),
+    dest('./dist/sounds')]);
 });
 
 /**
  * Detectar cambios en los archivos
  */
-gulp.task('watch', function() {
+task('watch', function() {
 
-  gulp.watch('./src/scripts/**')
+  watch('./src/scripts/**')
   .on('change', function(file){
-    gutil.log(gutil.colors.yellow('Actualizado Js: ' + ' (' + file.path + ')'));
+    log(colors.yellow(`Actualizado Js: (${file.path})`));
   });
 
-  gulp.watch(['./src/**/*.html'])
+  watch(['./src/**/*.html'])
     .on('change', function(file){
-      gutil.log(gutil.colors.blue('Actualizado Html: ' + ' (' + file.path + ')'));
+      log(colors.blue(`Actualizado Html: (${file.path})`));
     });
 
-  gulp.watch('./src/styles/sass/**/*', function() {
+  watch('./src/styles/sass/**/*', function() {
     runSequence('convert-sass');
   })
   .on('change', function(file){
-    gutil.log(gutil.colors.green('Actualizado Css: ' + ' (' + file.path + ')'));
+    log(colors.green(`Actualizado Css: (${file.path})`));
   });
 });
 
 /**
  * Empezar Gulp
  */
-gulp.task('start', ['convert-sass', 'watch']);
+task('start', ['convert-sass', 'watch']);
