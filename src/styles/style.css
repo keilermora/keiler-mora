@@ -195,34 +195,34 @@ section {
     section#section-conocimientos #conocimientos-detalles #etiqueta {
       font-family: "Merienda One", cursive;
       opacity: 0; }
-  section#section-portafolios {
+  section#section-portafolio {
     padding-bottom: 3em; }
-    section#section-portafolios .portafolio-imagen img {
+    section#section-portafolio .portafolio-imagen img {
       height: auto; }
       @media (max-width: 991px) {
-        section#section-portafolios .portafolio-imagen img {
+        section#section-portafolio .portafolio-imagen img {
           width: 28rem; } }
-    section#section-portafolios .portafolio-detalles {
+    section#section-portafolio .portafolio-detalles {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 21.1em;
       padding: 1em 1em 0.5em; }
       @media (min-width: 992px) and (max-width: 1199px) {
-        section#section-portafolios .portafolio-detalles {
+        section#section-portafolio .portafolio-detalles {
           height: 22.8rem; } }
       @media (min-width: 768px) and (max-width: 991px) {
-        section#section-portafolios .portafolio-detalles {
+        section#section-portafolio .portafolio-detalles {
           height: 13.3rem; } }
       @media (max-width: 767px) {
-        section#section-portafolios .portafolio-detalles {
+        section#section-portafolio .portafolio-detalles {
           height: auto; } }
-      section#section-portafolios .portafolio-detalles .portafolio-titulo {
+      section#section-portafolio .portafolio-detalles .portafolio-titulo {
         font-family: "Merienda One", cursive;
         font-size: 2.2rem; }
-      section#section-portafolios .portafolio-detalles a {
+      section#section-portafolio .portafolio-detalles a {
         display: inline-block; }
-      section#section-portafolios .portafolio-detalles .portafolio-descripcion {
+      section#section-portafolio .portafolio-detalles .portafolio-descripcion {
         margin-top: 1em; }
 
 body,
