@@ -2,57 +2,61 @@
 @import "../helpers/vertical-align";
 
 .swiper-container {
-    width: 100%;
-    height: 28em;
+  width: 100%;
+  height: 28em;
 
-    @media (min-width: 992px) and (max-width: 1199px) {
-        height: 20em;
+  @media (min-width: 992px) and (max-width: 1199px) {
+    height: 20em;
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    height: 16em;
+  }
+
+  @media (max-width: 767px) {
+    height: 19em;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    @include vertical-align(center);
+
+    background-image: none;
+    height: 100%;
+    top: 1.4em;
+    width: 4em;
+    text-align: center;
+
+    &:hover span {
+      color: $blue-selected;
     }
 
-    @media (min-width: 768px) and (max-width: 991px) {
-        height: 16em;
+    span {
+      font-size: 5rem;
+      transition: color 250ms;
     }
+  }
+
+  .swiper-button-prev {
+    left: 0;
+  }
+  .swiper-button-next {
+    right: 0;
+  }
+
+  .swiper-pagination {
+    background-color: transparent !important;
+  }
+
+  .swiper-slide {
+    @include vertical-align(center);
 
     @media (max-width: 767px) {
-        height: 19em;
+      @include vertical-align(initial);
     }
 
-    .swiper-button-prev,
-    .swiper-button-next {
-    	@include vertical-align(center);
-
-    	background-image: none;
-    	height: 100%;
-    	top: 1.4em;
-    	width: 4em;
-    	text-align: center;
-
-    	&:hover span {
-          color: $blue-selected;
-    	}
-
-        span {
-          font-size: 5rem;
-          transition: color 250ms;
-        }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      background-color: #eee;
     }
-
-    .swiper-button-prev {
-    	left: 0;
-    }
-    .swiper-button-next {
-    	right: 0;
-    }
-
-    .swiper-pagination {
-        background-color: transparent !important;
-    }
-
-    .swiper-slide {
-        @include vertical-align(center);
-
-        @media (max-width: 767px) {
-            @include vertical-align(initial);
-        }
-    }
+  }
 }

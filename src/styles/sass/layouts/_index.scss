@@ -20,7 +20,11 @@ section {
 		}
 
 		div#acerca-de-mi {
-			padding: 1.5em 1.5em 1em;
+			padding: 1.5em;
+
+			p {
+				margin: 0;
+			}
 		}
 	}
 
@@ -91,7 +95,7 @@ section {
         .portafolio-detalles {
         	@include vertical-align(center);
             height: 21.1em;
-            padding: 1em 1em 0.5em;
+            padding: 1.5em;
 
 		    @media (min-width: 992px) and (max-width: 1199px) {
 		        height: 22.8rem;
@@ -114,7 +118,7 @@ section {
 				display: inline-block;
             }
 
-            .portafolio-descripcion {
+            .portafolio-descripcion p {
             	margin-top: 1em;
             }
         }
