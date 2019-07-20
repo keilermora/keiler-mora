@@ -1,18 +1,22 @@
 'use strict';
 
-const { dest, src, task, watch } = require('gulp'),
-  { colors, log } = require('gulp-util'),
-  bytediff    = require('gulp-bytediff'),
-  concat      = require('gulp-concat'),
-  del         = require('del'),
-  imagemin    = require('gulp-imagemin'),
+const gulp = require('gulp'),
+  autoprefixer = require('autoprefixer'),
+  bytediff = require('gulp-bytediff'),
+  cssnano = require('cssnano'),
+  concat = require('gulp-concat'),
+  del = require('del'),
+  gutil = require('gulp-util'),
+  htmlmin = require('gulp-htmlmin'),
+  postcss = require('gulp-postcss'),
   processhtml = require('gulp-processhtml'),
-  pump        = require('pump'),
+  pump = require('pump'),
   runSequence = require('run-sequence'),
-  sass        = require('gulp-sass'),
-  strip       = require('gulp-strip-comments'),
-  uglify      = require('gulp-uglify'),
-  uglifycss   = require('gulp-uglifycss');
+  sass = require('gulp-sass'),
+  sourcemaps = require('gulp-sourcemaps'),
+  strip = require('gulp-strip-comments'),
+  uglify = require('gulp-uglify'),
+  uglifycss = require('gulp-uglifycss');
 
 function calculateDataSavings(data) {
   let message = '';
@@ -35,20 +39,16 @@ const styles = [
   './src/styles/*.css'
 ];
 
-const scripts = {
-  todos: [
-    './node_modules/jquery/dist/jquery.min.js',
-    './node_modules/bootstrap/dist/js/bootstrap.min.js',
-    './node_modules/swiper/dist/js/swiper.min.js',
-    './src/scripts/index.js'
-  ],
-  TweenMax: [
-    './node_modules/gsap/src/minified/TweenLite.min.js',
-    './node_modules/gsap/src/minified/easing/EasePack.min.js',
-    './node_modules/gsap/src/minified/plugins/CSSPlugin.min.js',
-    './node_modules/gsap/src/minified/plugins/ScrollToPlugin.min.js'
-  ]
-};
+const scripts = [
+  './node_modules/jquery/dist/jquery.min.js',
+  './node_modules/bootstrap/dist/js/bootstrap.min.js',
+  './node_modules/swiper/dist/js/swiper.min.js',
+  './node_modules/gsap/src/minified/TweenLite.min.js',
+  './node_modules/gsap/src/minified/easing/EasePack.min.js',
+  './node_modules/gsap/src/minified/plugins/CSSPlugin.min.js',
+  './node_modules/gsap/src/minified/plugins/ScrollToPlugin.min.js',
+  './src/scripts/index.js'
+];
 
 const fonts = [
   './node_modules/font-awesome/fonts/**/*'
@@ -57,7 +57,7 @@ const fonts = [
 /**
  * Construir el proyecto
  */
-task('build', function() {
+gulp.task('build', function() {
   runSequence(
     'clean-build', // Limpiar directorio dist
     'convert-sass', // Copiar y convertir SASS a CSS
@@ -73,118 +73,121 @@ task('build', function() {
 /**
  * Limpiar directorio dist
  */
-task('clean-build', function() {
+gulp.task('clean-build', function() {
   del('./dist');
 });
 
 /**
  * Copiar y convertir SASS a CSS
  */
-task('convert-sass', function(cb) {
+gulp.task('convert-sass', function(cb) {
   pump([
-    src('./src/styles/sass/style.scss'),
+    gulp.src('./src/styles/sass/style.scss'),
     sass().on('error', sass.logError),
-    dest('./src/styles')], cb);
+    gulp.dest('./src/styles')], cb);
 });
 
 /**
  * Comprimir y copiar CSS
  */
-task('compress-css', function(cb) {
+gulp.task('compress-css', function(cb) {
   pump([
-    src(styles),
+    gulp.src(styles),
+    concat('style.min.css'),
     bytediff.start(),
+    postcss([
+      autoprefixer(),
+      cssnano()
+    ]),
+    sourcemaps.init(),
     uglifycss(),
+    sourcemaps.write('/'),
     bytediff.stop(function(data) { return calculateDataSavings(data); }),
-    dest('./dist/styles')], cb);
+    gulp.dest('./dist/styles/')], cb);
 });
 
 /**
  * Comprimir y copiar JS
  */
-task('compress-js', function() {
+gulp.task('compress-js', function() {
   pump([
-    src(scripts.todos),
+    gulp.src(scripts),
+    concat('script.min.js'),
+    sourcemaps.init(),
     bytediff.start(),
     uglify(),
     strip(),
     bytediff.stop(function(data) { return calculateDataSavings(data); }),
-    dest('./dist/scripts')]);
-
-  pump([
-    src(scripts.TweenMax),
-    bytediff.start(),
-    uglify(),
-    strip(),
-    bytediff.stop(function(data) { return calculateDataSavings(data); }),
-    concat('TweenMax.min.js'),
-    dest('./dist/scripts')]);
+    sourcemaps.write('/'),
+    gulp.dest('./dist/scripts/')]);
 });
 
 /**
  * Comprimir y copiar imágenes
  */
-task('compress-images', function(cb) {
+gulp.task('compress-images', function(cb) {
   pump([
-    src(['./src/images/*', '!./src/images/*.svg']),
-    bytediff.start(),
-    imagemin(),
-    bytediff.stop(function(data) { return calculateDataSavings(data); }),
-    dest('./dist/images')], cb);
+    gulp.src(['./src/images/*', '!./src/images/*.svg']),
+    gulp.dest('./dist/images')], cb);
 });
 
-task('copy-fonts', function(cb) {
-  pump([src(fonts), dest('./dist/fonts')], cb);
+gulp.task('copy-fonts', function(cb) {
+  pump([gulp.src(fonts), gulp.dest('./dist/fonts')], cb);
 });
 
 /**
  * Procesar y copiar html
  */
-task('process-html', function(cb) {
+gulp.task('process-html', function(cb) {
   pump([
-    src(['./src/*.index']),
+    gulp.src(['./src/index.html']),
     processhtml(),
-    strip(),
-    dest('./dist')], cb);
+    htmlmin({
+      collapseWhitespace: true,
+      minifyCSS: true,
+      minifyJS: true,
+      removeComments: true
+    }),
+    gulp.dest('./dist')], cb);
 });
 
 /**
  * Copiar los archivos que no requieren ser procesados
  */
-task('copy-main-files', function() {
+gulp.task('copy-main-files', function() {
   pump([
-    src(['./src/locales/*.json']),
-    dest('./dist/locales')]);
+    gulp.src(['./src/locales/*.json']),
+    gulp.dest('./dist/locales')]);
 
   pump([
-    src(['./src/sounds/*.wav']),
-    dest('./dist/sounds')]);
+    gulp.src(['./src/sounds/*.wav']),
+    gulp.dest('./dist/sounds')]);
 });
 
 /**
  * Detectar cambios en los archivos
  */
-task('watch', function() {
+gulp.task('watch', function() {
 
-  watch('./src/scripts/**')
+  gulp.watch('./src/scripts/**')
   .on('change', function(file){
-    log(colors.yellow(`Actualizado Js: (${file.path})`));
+    gutil.log(gutil.colors.yellow(`Actualizado Js: (${file.path})`));
   });
 
-  watch(['./src/**/*.html'])
+  gulp.watch(['./src/**/*.html'])
     .on('change', function(file){
-      log(colors.blue(`Actualizado Html: (${file.path})`));
+      gutil.log(gutil.colors.blue(`Actualizado Html: (${file.path})`));
     });
 
-  watch('./src/styles/sass/**/*', function() {
+  gulp.watch('./src/styles/sass/**/*', function() {
     runSequence('convert-sass');
   })
   .on('change', function(file){
-    log(colors.green(`Actualizado Css: (${file.path})`));
+    gutil.log(gutil.colors.green(`Actualizado Css: (${file.path})`));
   });
 });
 
 /**
  * Empezar Gulp
  */
-task('start', ['convert-sass', 'watch']);
+gulp.task('start', ['convert-sass', 'watch']);
