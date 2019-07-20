@@ -13,6 +13,10 @@
     "url": "https://github.com/keilermora/keiler-mora/issues"
   },
   "homepage": "https://github.com/keilermora/keiler-mora#readme",
+  "scripts": {
+    "start": "gulp start",
+    "build": "gulp build"
+  },
   "devDependencies": {
     "del": "^2.2.2",
     "gulp": "^3.9.1",

@@ -205,4 +205,4 @@ gulp.task('watch', function() {
 /**
  * Empezar Gulp
  */
-gulp.task('start', ['watch']);
+gulp.task('start', ['convert-sass', 'watch']);
