@@ -148,7 +148,7 @@ gulp.task('copy-fonts', function(cb) {
  */
 gulp.task('process-html', function(cb) {
   pump([
-    gulp.src(['./src/*.php']),
+    gulp.src(['./src/*.index']),
     processhtml(),
     strip(),
     gulp.dest('./dist')], cb);
@@ -158,18 +158,6 @@ gulp.task('process-html', function(cb) {
  * Copiar los archivos que no requieren ser procesados
  */
 gulp.task('copy-main-files', function() {
-  pump([
-    gulp.src(['./src/classes/*.php']),
-    gulp.dest('./dist/classes')]);
-
-  pump([
-    gulp.src(['./src/functions/*.php']),
-    gulp.dest('./dist/functions')]);
-
-  pump([
-    gulp.src(['./src/images/*.svg']),
-    gulp.dest('./dist/images')]);
-
   pump([
     gulp.src(['./src/locales/*.json']),
     gulp.dest('./dist/locales')]);
@@ -189,9 +177,9 @@ gulp.task('watch', function() {
     gutil.log(gutil.colors.yellow('Actualizado Js: ' + ' (' + file.path + ')'));
   });
 
-  gulp.watch(['./src/**/*.php', './src/**/*.html'])
+  gulp.watch(['./src/**/*.html'])
     .on('change', function(file){
-      gutil.log(gutil.colors.blue('Actualizado Php/Html: ' + ' (' + file.path + ')'));
+      gutil.log(gutil.colors.blue('Actualizado Html: ' + ' (' + file.path + ')'));
     });
 
   gulp.watch('./src/styles/sass/**/*', function() {
