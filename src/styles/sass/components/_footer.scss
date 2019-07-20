@@ -2,7 +2,7 @@
 @import "../helpers/colors";
 
 footer {
-	background-color: $azul-oscuro;
+	background-color: $blue-dark;
 	color: $white;
 	padding-top: 2em;
 	padding-bottom: 2em;
@@ -20,7 +20,7 @@ footer {
 			transition: color 250ms;
 
 			&:hover {
-				color: $azul-seleccion;
+				color: $blue-selected;
 				text-decoration: none;
 			}
 		}

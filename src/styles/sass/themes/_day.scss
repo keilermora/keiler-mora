@@ -36,26 +36,20 @@ body.day {
 
     #jquery-subtitulo {
       &.day {
-        fill: $azul-oscuro-jquery;
+        fill: $jquery-primary-blue;
       }
     }
 
     .jquery-logo {
       &.day {
-        fill: $azul-oscuro-jquery;
+        fill: $jquery-primary-blue;
       }
     }
 
     .jquery-titulo {
       &.day {
-        fill: $gris-jquery;
+        fill: $jquery-black;
       }
-    }
-  }
-
-  #mongodb-logo {
-    path.day {
-      fill: $gris-mongodb;
     }
   }
 
@@ -63,20 +57,20 @@ body.day {
 
     .nodejs-titulo {
       &.day {
-        fill: $gris-nodejs;
+        fill: $nodejs-gray;
       }
     }
   }
 
   #sass-logo {
     path.day {
-      fill: $rosado-sass;
+      fill: $sass-color--hopbush;
     }
   }
 
   #wordpress-logo {
-    g.day {
-      fill: $gris-wordpress;
+    path.day {
+      fill: $wordpress-gray;
     }
   }
 }

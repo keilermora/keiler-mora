@@ -250,18 +250,16 @@ body.day {
   body.day #css3-logo path.day {
     fill: #000; }
   body.day #jquery-logo #jquery-subtitulo.day {
-    fill: #0d61a8; }
+    fill: #0769ad; }
   body.day #jquery-logo .jquery-logo.day {
-    fill: #0d61a8; }
+    fill: #0769ad; }
   body.day #jquery-logo .jquery-titulo.day {
-    fill: #3b3835; }
-  body.day #mongodb-logo path.day {
-    fill: #484748; }
+    fill: #333; }
   body.day #nodejs-logo .nodejs-titulo.day {
     fill: #333; }
   body.day #sass-logo path.day {
-    fill: #d06397; }
-  body.day #wordpress-logo g.day {
+    fill: #c69; }
+  body.day #wordpress-logo path.day {
     fill: #464646; }
 
 body.night {
@@ -275,19 +273,17 @@ body.night {
   body.night .swiper-button-prev,
   body.night .swiper-button-next {
     color: #fff; }
-  body.night #css3-logo path.day {
+  body.night #css3-logo path.night {
     fill: #fff; }
-  body.night #jquery-logo #jquery-subtitulo.day {
-    fill: #0d61a8; }
-  body.night #jquery-logo .jquery-logo.day {
-    fill: #0d61a8; }
-  body.night #jquery-logo .jquery-titulo.day {
-    fill: #3b3835; }
-  body.night #mongodb-logo path.day {
-    fill: #484748; }
-  body.night #nodejs-logo .nodejs-titulo.day {
-    fill: #333; }
-  body.night #sass-logo path.day {
-    fill: #d06397; }
-  body.night #wordpress-logo g.day {
-    fill: #464646; }
+  body.night #jquery-logo #jquery-subtitulo.night {
+    fill: #fff; }
+  body.night #jquery-logo .jquery-logo.night {
+    fill: #7acef4; }
+  body.night #jquery-logo .jquery-titulo.night {
+    fill: #fff; }
+  body.night #nodejs-logo .nodejs-titulo.night {
+    fill: #fff; }
+  body.night #sass-logo path.night {
+    fill: #fff; }
+  body.night #wordpress-logo path.night {
+    fill: #21759b; }

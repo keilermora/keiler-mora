@@ -27,7 +27,7 @@ body.night {
   }
 
   #css3-logo {
-    path.day {
+    path.night {
       fill: $text-night;
     }
   }
@@ -35,48 +35,42 @@ body.night {
   #jquery-logo {
 
     #jquery-subtitulo {
-      &.day {
-        fill: $azul-oscuro-jquery;
+      &.night {
+        fill: $white;
       }
     }
 
     .jquery-logo {
-      &.day {
-        fill: $azul-oscuro-jquery;
+      &.night {
+        fill: $jquery-secondary-blue;
       }
     }
 
     .jquery-titulo {
-      &.day {
-        fill: $gris-jquery;
+      &.night {
+        fill: $white;
       }
-    }
-  }
-
-  #mongodb-logo {
-    path.day {
-      fill: $gris-mongodb;
     }
   }
 
   #nodejs-logo {
 
     .nodejs-titulo {
-      &.day {
-        fill: $gris-nodejs;
+      &.night {
+        fill: $white;
       }
     }
   }
 
   #sass-logo {
-    path.day {
-      fill: $rosado-sass;
+    path.night {
+      fill: $white;
     }
   }
 
   #wordpress-logo {
-    g.day {
-      fill: $gris-wordpress;
+    path.night {
+      fill: $wordpress-blue;
     }
   }
 }

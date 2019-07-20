@@ -2,13 +2,13 @@
 @import "../helpers/colors";
 
 nav {
-  background-color: $azul-oscuro !important;
+  background-color: $blue-dark !important;
   border: none !important;
   color: $white;
 
   li {
     &.active a {
-      background-color: $azul-seleccion !important;
+      background-color: $blue-selected !important;
     }
 
     a {
@@ -17,29 +17,29 @@ nav {
       transition: background-color 250ms;
 
       &:hover {
-        background-color: $azul-seleccion !important;
+        background-color: $blue-selected !important;
       }
     }
   }
 
 
   .dropdown {
-    background-color: $azul-oscuro;
+    background-color: $blue-dark;
 
     &.open a {
-      background-color: $azul-seleccion !important;
+      background-color: $blue-selected !important;
     }
 
     .dropdown-menu {
-      background-color: $azul-seleccion !important;
+      background-color: $blue-selected !important;
 
       a {
-        background-color: $azul-oscuro !important;
+        background-color: $blue-dark !important;
         color: $white;
         transition: background-color 500ms;
 
         &:hover {
-          background-color: $azul-seleccion !important;
+          background-color: $blue-selected !important;
         }
       }
     }
@@ -56,7 +56,7 @@ nav {
     &:active,
     &:focus {
       .icon-bar {
-        background-color: $azul-seleccion !important;
+        background-color: $blue-selected !important;
       }
     }
   }
