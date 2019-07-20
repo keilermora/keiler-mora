@@ -4,26 +4,20 @@
 footer {
 	background-color: $blue-dark;
 	color: $white;
-	padding-top: 2em;
-	padding-bottom: 2em;
+	padding-top: 0.25em;
+	padding-bottom: 0.25em;
+	text-align: right;
 
-	.footer-container {
-		@media (max-width: 767px) {
-	        text-align: center;
-	    }
-	    
-		.enlace-contacto {
-			color: $white;
-			font-size: 2em;
-			padding-left: 0.2em;
-			padding-right: 0.2em;
-			transition: color 250ms;
+	.enlace-contacto {
+		color: $white;
+		font-size: 2em;
+		padding-left: 0.2em;
+		padding-right: 0.2em;
+		transition: color 250ms;
 
-			&:hover {
-				color: $blue-selected;
-				text-decoration: none;
-			}
+		&:hover {
+			color: $blue-selected;
+			text-decoration: none;
 		}
-
 	}
 }

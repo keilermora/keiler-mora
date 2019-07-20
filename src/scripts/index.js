@@ -74,7 +74,7 @@
       var href = $(this).attr('href');
 
       if(href) {
-        TweenLite.to(window, 1, { scrollTo: href });
+        TweenLite.to(window, 1, { scrollTo: { y: href, offsetY: 50 }});
         $('#navbar-collapse').collapse('hide');
       }
     });

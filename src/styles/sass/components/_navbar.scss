@@ -19,6 +19,10 @@ nav {
       &:hover {
         background-color: $blue-selected !important;
       }
+
+      &.active {
+        background-color: $blue-selected !important;
+      }
     }
   }
 
@@ -32,6 +36,9 @@ nav {
 
     .dropdown-menu {
       background-color: $blue-selected !important;
+      padding-top: 0;
+      padding-bottom: 0;
+      min-width: 101px;
 
       a {
         background-color: $blue-dark !important;
@@ -58,6 +65,15 @@ nav {
       .icon-bar {
         background-color: $blue-selected !important;
       }
+    }
+  }
+
+  .navbar-collapse {
+    border: none;
+
+    .navbar-nav {
+      margin-top: 0;
+      margin-bottom: 0;
     }
   }
 }

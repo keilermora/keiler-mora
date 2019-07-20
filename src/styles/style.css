@@ -11,7 +11,8 @@ body {
   font-family: "Ubuntu", sans-serif, Arial;
   font-size: 16px;
   position: relative !important;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  padding-top: 50px; }
 
 button {
   transition: background-color 500ms;
@@ -24,18 +25,16 @@ button {
 footer {
   background-color: #00334d;
   color: #fff;
-  padding-top: 2em;
-  padding-bottom: 2em; }
-  @media (max-width: 767px) {
-    footer .footer-container {
-      text-align: center; } }
-  footer .footer-container .enlace-contacto {
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  text-align: right; }
+  footer .enlace-contacto {
     color: #fff;
     font-size: 2em;
     padding-left: 0.2em;
     padding-right: 0.2em;
     transition: color 250ms; }
-    footer .footer-container .enlace-contacto:hover {
+    footer .enlace-contacto:hover {
       color: #0288d1;
       text-decoration: none; }
 
@@ -54,12 +53,17 @@ nav {
     transition: background-color 250ms; }
     nav li a:hover {
       background-color: #0288d1 !important; }
+    nav li a.active {
+      background-color: #0288d1 !important; }
   nav .dropdown {
     background-color: #00334d; }
     nav .dropdown.open a {
       background-color: #0288d1 !important; }
     nav .dropdown .dropdown-menu {
-      background-color: #0288d1 !important; }
+      background-color: #0288d1 !important;
+      padding-top: 0;
+      padding-bottom: 0;
+      min-width: 101px; }
       nav .dropdown .dropdown-menu a {
         background-color: #00334d !important;
         color: #fff;
@@ -72,6 +76,11 @@ nav {
       background-color: #fff !important; }
     nav .navbar-toggle:hover .icon-bar, nav .navbar-toggle:active .icon-bar, nav .navbar-toggle:focus .icon-bar {
       background-color: #0288d1 !important; }
+  nav .navbar-collapse {
+    border: none; }
+    nav .navbar-collapse .navbar-nav {
+      margin-top: 0;
+      margin-bottom: 0; }
 
 p {
   text-align: justify;
@@ -142,11 +151,8 @@ p {
  * Sección Home
  */
 section {
-  padding-top: 6em;
+  padding-top: 2em;
   padding-bottom: 2em; }
-  @media (max-width: 767px) {
-    section {
-      padding-top: 2em; } }
   section#section-inicio h1 {
     margin-bottom: 0.5em; }
     @media (max-width: 767px) {
