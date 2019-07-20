@@ -205,18 +205,18 @@ p {
 
 body,
 .swiper-pagination-bullet,
-div.dia,
-div.noche {
+div.day,
+div.night {
   -o-transition: background-color 1s;
   -ms-transition: background-color 1s;
   -moz-transition: background-color 1s;
   -webkit-transition: background-color 1s;
   transition: background-color 1s; }
 
-h1.dia,
-h1.noche,
-h3.dia,
-h3.noche,
+h1.day,
+h1.night,
+h3.day,
+h3.night,
 span,
 p {
   -o-transition: color 1s;
@@ -225,99 +225,99 @@ p {
   -webkit-transition: color 1s;
   transition: color 1s; }
 
-path.dia, path.noche,
-circle.dia,
-circle.noche,
-g.dia,
-g.noche {
+path.day, path.night,
+circle.day,
+circle.night,
+g.day,
+g.night {
   -o-transition: fill 1s;
   -ms-transition: fill 1s;
   -moz-transition: fill 1s;
   -webkit-transition: fill 1s;
   transition: fill 1s; }
 
-body.dia {
+body.day {
   background-color: #cce4ff; }
 
-body.noche {
+body.night {
   background-color: #000; }
 
-div.dia {
+div.day {
   background-color: #eee; }
 
-div.noche {
+div.night {
   background-color: #d4d4d4; }
 
-h1.dia, h2.dia, h3.dia, span.dia, p.dia {
+h1.day, h2.day, h3.day, span.day, p.day {
   color: #000; }
 
-h1.noche, h2.noche, h3.noche, span.noche, p.noche {
+h1.night, h2.night, h3.night, span.night, p.night {
   color: #fff; }
 
-#css3-logo path.dia {
+#css3-logo path.day {
   fill: #000; }
 
-#css3-logo path.noche {
+#css3-logo path.night {
   fill: #fff; }
 
-#jquery-logo #jquery-subtitulo.dia {
+#jquery-logo #jquery-subtitulo.day {
   fill: #0d61a8; }
 
-#jquery-logo #jquery-subtitulo.noche {
+#jquery-logo #jquery-subtitulo.night {
   fill: #fff; }
 
-#jquery-logo .jquery-logo.dia {
+#jquery-logo .jquery-logo.day {
   fill: #0d61a8; }
 
-#jquery-logo .jquery-logo.noche {
+#jquery-logo .jquery-logo.night {
   fill: #8dd1f5; }
 
-#jquery-logo .jquery-titulo.dia {
+#jquery-logo .jquery-titulo.day {
   fill: #3b3835; }
 
-#jquery-logo .jquery-titulo.noche {
+#jquery-logo .jquery-titulo.night {
   fill: #fff; }
 
-#mongodb-logo path.dia {
+#mongodb-logo path.day {
   fill: #484748; }
 
-#mongodb-logo path.noche {
+#mongodb-logo path.night {
   fill: #fff; }
 
-#nodejs-logo .nodejs-titulo.dia {
+#nodejs-logo .nodejs-titulo.day {
   fill: #333; }
 
-#nodejs-logo .nodejs-titulo.noche {
+#nodejs-logo .nodejs-titulo.night {
   fill: #fff; }
 
-#sass-logo path.dia {
+#sass-logo path.day {
   fill: #d06397; }
 
-#sass-logo path.noche {
+#sass-logo path.night {
   fill: #fff; }
 
-#wordpress-logo g.dia {
+#wordpress-logo g.day {
   fill: #464646; }
 
-#wordpress-logo g.noche {
+#wordpress-logo g.night {
   fill: #21759b; }
 
-.swiper-pagination.dia .swiper-pagination-bullet {
+.swiper-pagination.day .swiper-pagination-bullet {
   background-color: #000; }
 
-.swiper-pagination.noche .swiper-pagination-bullet {
+.swiper-pagination.night .swiper-pagination-bullet {
   background-color: #fff; }
 
-.claro.dia {
+.claro.day {
   display: inline; }
 
-.claro.noche {
+.claro.night {
   display: none; }
 
-.oscuro.dia {
+.oscuro.day {
   display: none; }
 
-.oscuro.noche {
+.oscuro.night {
   display: inline; }
 
 /**

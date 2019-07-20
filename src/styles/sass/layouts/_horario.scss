@@ -1,15 +1,18 @@
+@charset "UTF-8";
+@import "../helpers/variables";
+
 //Transiciones
 body,
 .swiper-pagination-bullet,
-div.dia,
-div.noche {
+div.day,
+div.night {
 	@include transition(background-color, 1s);
 }
 
-h1.dia,
-h1.noche,
-h3.dia,
-h3.noche,
+h1.day,
+h1.night,
+h3.day,
+h3.night,
 span,
 p {
 	@include transition(color, 1s);
@@ -18,87 +21,87 @@ p {
 path,
 circle,
 g {
-	&.dia,
-	&.noche {
+	&.day,
+	&.night {
 		@include transition(fill, 1s);
 	}
 }
 
 //Colores
 body {
-	&.dia {
-		background-color: $body-dia;
+	&.day {
+		background-color: $body-day;
 	}
 
-	&.noche {
-		background-color: $body-noche;
+	&.night {
+		background-color: $body-night;
 	}
 }
 
 div {
-	&.dia {
-		background-color: $div-dia;
+	&.day {
+		background-color: $div-day;
 	}
 
-	&.noche {
-		background-color: $div-noche;
+	&.night {
+		background-color: $div-night;
 	}
 }
 
 h1, h2, h3, span, p {
-	&.dia {
-		color: $texto-dia;
+	&.day {
+		color: $texto-day;
 	}
 
-	&.noche {
-		color: $texto-noche;
+	&.night {
+		color: $texto-night;
 	}
 }
 
 #css3-logo {
-	path.dia {
-		fill: $texto-dia;
+	path.day {
+		fill: $texto-day;
 	}
-	path.noche {
-		fill: $texto-noche;
+	path.night {
+		fill: $texto-night;
 	}
 }
 
 #jquery-logo {
 
 	#jquery-subtitulo {
-		&.dia {
+		&.day {
 			fill: $azul-oscuro-jquery;
 		}
-		&.noche {
+		&.night {
 			fill: $blanco;
 		}
 	}
 
 	.jquery-logo {
-		&.dia {
+		&.day {
 			fill: $azul-oscuro-jquery;
 		}
-		&.noche {
+		&.night {
 			fill: $azul-claro-jquery;
 		}
 	}
 
 	.jquery-titulo {
-		&.dia {
+		&.day {
 			fill: $gris-jquery;
 		}
-		&.noche {
+		&.night {
 			fill: $blanco;
 		}
 	}
 }
 
 #mongodb-logo {
-	path.dia {
+	path.day {
 		fill: $gris-mongodb;
 	}
-	path.noche {
+	path.night {
 		fill: $blanco;
 	}
 }
@@ -106,51 +109,51 @@ h1, h2, h3, span, p {
 #nodejs-logo {
 
 	.nodejs-titulo {
-		&.dia {
+		&.day {
 			fill: $gris-nodejs;
 		}
-		&.noche {
+		&.night {
 			fill: $blanco;
 		}
 	}
 }
 
 #sass-logo {
-	path.dia {
+	path.day {
 		fill: $rosado-sass;
 	}
-	path.noche {
+	path.night {
 		fill: $blanco;
 	}
 }
 
 #wordpress-logo {
-	g.dia {
+	g.day {
 		fill: $gris-wordpress;
 	}
-	g.noche {
+	g.night {
 		fill: $azul-wordpress;
 	}
 }
 
 .swiper-pagination  {
-	&.dia .swiper-pagination-bullet {
+	&.day .swiper-pagination-bullet {
 		background-color: $negro;
 	}
-	&.noche .swiper-pagination-bullet {
+	&.night .swiper-pagination-bullet {
 		background-color: $blanco;        
 	}
 }
 
-.claro.dia {
+.claro.day {
 	display: inline;
 }
-.claro.noche {
+.claro.night {
 	display: none;
 }
-.oscuro.dia {
+.oscuro.day {
 	display: none;
 }
-.oscuro.noche {
+.oscuro.night {
 	display: inline;
 }
