@@ -1,9 +1,11 @@
+@charset "UTF-8";
+
 p {
 	text-align: justify;
 	text-indent: 2em;
 
 	@media (max-width: 575px) {
 		text-align: center;
-		text-indent: 0em;
+		text-indent: 0;
 	}
 }

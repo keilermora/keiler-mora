@@ -1,3 +1,6 @@
+@charset "UTF-8";
+@import "../helpers/vertical-align";
+
 /**
  * Sección Home
  */
@@ -33,21 +36,19 @@ section {
 			margin-top: 2em;
 
 			@media (max-width: 767px) {
-				display: -webkit-flex; /* Safari */
-			    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
 			    display: flex;
 			    flex-wrap: wrap;
-			    margin-top: 0rem;
+			    margin-top: 0;
 			    height: 264px;
 			}
 
 			svg {
-				@include transition(max-height, 0.25s);
 				cursor: pointer;
 				height: 100%;
 				padding-left: 0.15em;
 				padding-right: 0.15em;
 				max-height: 3.5em !important;
+				transition: max-height 250ms;
 
 				@media (max-width: 767px) {
 					margin: 0.5rem;
@@ -67,10 +68,10 @@ section {
 			font-size: 1.2em;
 			margin-top: 2em;
 			min-height: 2.51em;
-			padding: 0.5em 0em;
+			padding: 0.5em 0;
 
 			#etiqueta {
-				font-family: $titulo;
+				font-family: $merienda-one;
 				opacity: 0;
 			}
 		}
@@ -108,17 +109,12 @@ section {
 		    }
 
             .portafolio-titulo {
-            	font-family: $titulo;
+            	font-family: $merienda-one;
             	font-size: 2.2rem;
             }
 
             a {
-            	@include transition(color, 0.25s);
-            	display: inline-block;
-
-            	&:hover {
-            		text-decoration: none;
-            	}
+				display: inline-block;
             }
 
             .portafolio-descripcion {

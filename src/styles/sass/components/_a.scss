@@ -1,3 +1,10 @@
+@charset "UTF-8";
+
 a {
 	cursor: pointer;
+	transition: color 250ms;
+
+	&:hover {
+		text-decoration: none;
+	}
 }

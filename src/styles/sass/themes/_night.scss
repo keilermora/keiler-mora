@@ -1,0 +1,82 @@
+@charset "UTF-8";
+@import "../helpers/colors";
+
+$body-night: #000;
+$div-night: #d4d4d4;
+$text-night: #fff;
+
+body.night {
+  background-color: $body-night;
+
+  .theme-container {
+    background-color: $div-night;
+  }
+  .theme-text {
+    color: $text-night;
+  }
+
+  .swiper-pagination  {
+    .swiper-pagination-bullet {
+      background-color: $white;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: $text-night;
+  }
+
+  #css3-logo {
+    path.day {
+      fill: $text-night;
+    }
+  }
+
+  #jquery-logo {
+
+    #jquery-subtitulo {
+      &.day {
+        fill: $azul-oscuro-jquery;
+      }
+    }
+
+    .jquery-logo {
+      &.day {
+        fill: $azul-oscuro-jquery;
+      }
+    }
+
+    .jquery-titulo {
+      &.day {
+        fill: $gris-jquery;
+      }
+    }
+  }
+
+  #mongodb-logo {
+    path.day {
+      fill: $gris-mongodb;
+    }
+  }
+
+  #nodejs-logo {
+
+    .nodejs-titulo {
+      &.day {
+        fill: $gris-nodejs;
+      }
+    }
+  }
+
+  #sass-logo {
+    path.day {
+      fill: $rosado-sass;
+    }
+  }
+
+  #wordpress-logo {
+    g.day {
+      fill: $gris-wordpress;
+    }
+  }
+}

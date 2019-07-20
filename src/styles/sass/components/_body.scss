@@ -1,5 +1,8 @@
+@charset "UTF-8";
+@import "../base/typography";
+
 body {
-	font-family: $parrafo, Arial;
+	font-family: $ubuntu, Arial;
 	font-size: 16px;
 	position: relative !important;
 	overflow-x: hidden;

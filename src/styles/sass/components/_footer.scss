@@ -1,6 +1,9 @@
+@charset "UTF-8";
+@import "../helpers/colors";
+
 footer {
 	background-color: $azul-oscuro;
-	color: $blanco;
+	color: $white;
 	padding-top: 2em;
 	padding-bottom: 2em;
 
@@ -10,12 +13,11 @@ footer {
 	    }
 	    
 		.enlace-contacto {
-			@include transition(color, 0.25s);
-
-			color: $blanco;
+			color: $white;
 			font-size: 2em;
 			padding-left: 0.2em;
 			padding-right: 0.2em;
+			transition: color 250ms;
 
 			&:hover {
 				color: $azul-seleccion;
@@ -23,23 +25,5 @@ footer {
 			}
 		}
 
-	}
-
-	form {
-
-		textarea {
-			resize: none;
-		}
-
-		label {
-			font-weight: normal;
-			vertical-align: text-top;
-		}
-
-		button {
-			cursor: pointer;
-			margin-top: 0em;
-			width: 100%;
-		}
 	}
 }

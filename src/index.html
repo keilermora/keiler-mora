@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
     <title>Keiler Mora | Desarrollador Web</title>
 
-    <!-- Fuentes -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merienda+One|Ubuntu">
     <!-- build:css styles/bootstrap.min.css -->
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <!-- /build -->
@@ -46,10 +44,10 @@
 
           <!-- Botones de navegación -->
           <ul class="nav navbar-nav">
-            <li><a class="traducir" href="#section-inicio" data-key="acerca-de-mi"></a></li>
-            <li><a class="traducir" href="#section-conocimientos" data-key="conocimientos"></a></li>
-            <li><a class="traducir" href="#section-portafolios" data-key="portafolios"></a></li>
-            <li><a class="traducir" href="#section-contacto" data-key="contacto"></a></li>
+            <li><a class="translate" href="#section-inicio" data-key="acerca-de-mi"></a></li>
+            <li><a class="translate" href="#section-conocimientos" data-key="conocimientos"></a></li>
+            <li><a class="translate" href="#section-portafolios" data-key="portafolios"></a></li>
+            <li><a class="translate" href="#section-contacto" data-key="contacto"></a></li>
           </ul>
           
           <!-- Botones adicionales a la derecha del navbar -->
@@ -57,7 +55,7 @@
 
             <!-- Botón para cambiar idioma -->
             <li class="dropdown">
-              <a id="idiomas-dropdown" class="dropdown-toggle traducir" data-key="idioma" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+              <a id="idiomas-dropdown" class="dropdown-toggle translate" data-key="idioma" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
               <ul class="dropdown-menu">
                 <li><a class="btn-traductor" data-idioma="en">EN</a></li>
                 <li><a class="btn-traductor" data-idioma="es">ES</a></li>
@@ -89,9 +87,9 @@
 
             <!-- Decripción acerca de mi -->
             <div class="col-xs-* col-md-9">
-              <h1 class="text-center day">Keiler Mora</h1>
-              <div id="acerca-de-mi" class="day">
-                <p class="traducir" data-key="descripcion-acerca-de-mi"></p>
+              <h1 class="text-center theme-text">Keiler Mora</h1>
+              <div id="acerca-de-mi" class="theme-container">
+                <p class="translate" data-key="descripcion-acerca-de-mi"></p>
                 <img src="images/triforce.svg" alt="">
               </div>
             </div>
@@ -103,7 +101,7 @@
       <section id="section-conocimientos">
 
         <!-- Título de la sección conocimientos -->
-        <h1 class="text-center traducir day" data-key="conocimientos"></h1>
+        <h1 class="text-center translate theme-text" data-key="conocimientos"></h1>
 
         <!-- Logos que representan los conocimientos -->
         <div class="conocimientos-logos-container text-center">
@@ -119,7 +117,7 @@
         </div>
 
         <!-- Texto de detalles de los conocimientos -->
-        <div id="conocimientos-detalles" class="day container-fluid text-center hidden-xs">
+        <div id="conocimientos-detalles" class="theme-container container-fluid text-center hidden-xs">
           <span id="etiqueta"></span>
         </div>
 
@@ -141,7 +139,7 @@
       <section id="section-portafolios">
 
         <!-- Título de la sección portafolios -->
-        <h1 class="text-center traducir day" data-key="portafolios"></h1>
+        <h1 class="text-center translate theme-text" data-key="portafolios"></h1>
 
         <!-- Slider con los trabajos más destacados -->
         <div class="swiper-container">
@@ -153,12 +151,12 @@
                   <div class="col-xs-12 col-sm-4 col-md-5 col-lg-6 portafolio-imagen">
                     <img class="img-responsive center-block" src="images/aliciatorres.png">
                   </div>
-                  <div class="col-xs-12 col-sm-8 col-md-7 col-lg-6 portafolio-detalles text-center day">
+                  <div class="col-xs-12 col-sm-8 col-md-7 col-lg-6 portafolio-detalles text-center theme-container">
                     <div>
                       <span class="portafolio-titulo">Libros Favoritos de Alicia</span><br>
                       <small><a class="portafolio-enlace" href="http://aliciatorres.dualemento.com" target="_blank">aliciatorres.com</a></small>
                       <div class="portafolio-descripcion">
-                        <p class="hidden-xs hidden-sm traducir" data-key="aerohome.com"></p>
+                        <p class="hidden-xs hidden-sm translate" data-key="aerohome.com"></p>
                       </div>
                     </div>
                   </div>
@@ -171,12 +169,12 @@
                   <div class="col-xs-12 col-sm-4 col-md-5 col-lg-6 portafolio-imagen">
                     <img class="img-responsive center-block" src="images/dualemento.png">
                   </div>
-                  <div class="col-xs-12 col-sm-8 col-md-7 col-lg-6 portafolio-detalles text-center day">
+                  <div class="col-xs-12 col-sm-8 col-md-7 col-lg-6 portafolio-detalles text-center theme-container">
                     <div>
                       <span class="portafolio-titulo">Dualemento</span><br>
                       <small><a href="http://dualemento.com" target="_blank">dualemento.com</a></small>
                       <div class="portafolio-descripcion">
-                        <p class="hidden-xs hidden-sm traducir" data-key="dualemento.com"></p>
+                        <p class="hidden-xs hidden-sm translate" data-key="dualemento.com"></p>
                       </div>
                     </div>
                   </div>
@@ -189,12 +187,12 @@
                   <div class="col-xs-12 col-sm-4 col-md-5 col-lg-6 portafolio-imagen">
                     <img class="img-responsive center-block" src="images/aerohome.png">
                   </div>
-                  <div class="col-xs-12 col-sm-8 col-md-7 col-lg-6 portafolio-detalles text-center day">
+                  <div class="col-xs-12 col-sm-8 col-md-7 col-lg-6 portafolio-detalles text-center theme-container">
                     <div>
                       <span class="portafolio-titulo">Aerohome</span><br>
                       <small><a class="portafolio-enlace" href="http://aerohome.dualemento.com" target="_blank">aerohome.com</a></small>
                       <div class="portafolio-descripcion">
-                        <p class="hidden-xs hidden-sm traducir" data-key="aerohome.com"></p>
+                        <p class="hidden-xs hidden-sm translate" data-key="aerohome.com"></p>
                       </div>
                     </div>
                   </div>
@@ -207,12 +205,12 @@
                   <div class="col-xs-12 col-sm-4 col-md-5 col-lg-6 portafolio-imagen">
                     <img class="img-responsive center-block" src="images/diagnostico-loreal-professionnel.png">
                   </div>
-                  <div class="col-xs-12 col-sm-8 col-md-7 col-lg-6  portafolio-detalles text-center day">
+                  <div class="col-xs-12 col-sm-8 col-md-7 col-lg-6  portafolio-detalles text-center theme-container">
                     <div>
                       <span class="portafolio-titulo">Diagnostico L'Oréal</span><br>
                       <small><a href="http://diagnosticolorealprofessionnel.dualemento.com" target="_blank">diagnosticolorealprofessionnel.com</a></small>
                       <div class="portafolio-descripcion">
-                        <p class="hidden-xs hidden-sm traducir" data-key="diagnosticolorealprofessionnel.com"></p>
+                        <p class="hidden-xs hidden-sm translate" data-key="diagnosticolorealprofessionnel.com"></p>
                       </div>
                     </div>
                   </div>
@@ -222,18 +220,14 @@
           </div>
 
           <!-- Paginación -->
-          <div class="swiper-pagination day"></div>
+          <div class="swiper-pagination"></div>
           
           <!-- Botones de paginación -->
           <div class="swiper-button-prev hidden-xs hidden-sm">
-            <span class="day">
-              <i class="fa fa-caret-left" aria-hidden="true"></i>
-            </span>
+            <i class="fa fa-caret-left" aria-hidden="true"></i>
           </div>
           <div class="swiper-button-next hidden-xs hidden-sm">
-            <span class="day">
-              <i class="fa fa-caret-right" aria-hidden="true"></i>
-            </span>
+            <i class="fa fa-caret-right" aria-hidden="true"></i>
           </div>
         </div>
       </section>
@@ -249,7 +243,7 @@
             <div class="container-fluid">
               <div class="row">
                 <div class="col-xs-12 footer-container">
-                  <span class="traducir" data-key="contactame"></span>
+                  <span class="translate" data-key="contactame"></span>
                 </div>
               </div>
               <div class="row">
@@ -276,19 +270,19 @@
                 <div class="row">
                   <div class="col-sm-6">
                     <div class="form-group">
-                      <input id="nombre" type="text" class="form-control traducir-placeholder" data-key="nombre" placeholder="">
+                      <input id="nombre" type="text" class="form-control translate-placeholder" data-key="nombre" placeholder="">
                     </div> 
                   </div>
                   <div class="col-sm-6">
                     <div class="form-group">
-                      <input id="correo" type="text" class="form-control traducir-placeholder" data-key="correo" placeholder="">
+                      <input id="correo" type="text" class="form-control translate-placeholder" data-key="correo" placeholder="">
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-sm-12">
                     <div class="form-group">
-                      <textarea id="mensaje" class="form-control traducir-placeholder" data-key="mensaje" placeholder=""></textarea>
+                      <textarea id="mensaje" class="form-control translate-placeholder" data-key="mensaje" placeholder=""></textarea>
                     </div>
                   </div>
                 </div>
@@ -296,11 +290,11 @@
                   <div class="col-lg-9 col-md-8">
                     <label class="form-check-label">
                       <input id="cc" type="checkbox" class="form-check-input">
-                      <span class="traducir" data-key="deseo-recibir-copia"></span>
+                      <span class="translate" data-key="deseo-recibir-copia"></span>
                     </label>
                   </div>
                   <div class="col-lg-3 col-md-4">
-                    <button type="submit" id="btn-enviar" class="btn btn-primary traducir" data-key="enviar"></button>
+                    <button type="submit" id="btn-enviar" class="btn btn-primary translate" data-key="enviar"></button>
                   </div>
                 </div>
               </div>

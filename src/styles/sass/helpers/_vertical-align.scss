@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+/// Mixin que alínea verticalmente los elementos de un contenedor.
+/// @param $position - Posición en la que se alinearán los elementos.
+@mixin vertical-align($position) {
+	display: flex;
+	justify-content: $position;
+	align-items: $position;
+}

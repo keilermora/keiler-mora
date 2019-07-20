@@ -20,7 +20,7 @@
    */
   function translate(language) {
     $.getJSON('locales/' + language + '.json', function(data) {
-      $('.traducir').each(function() {
+      $('.translate').each(function() {
         $(this).text(data[$(this).attr('data-key')]);
       });
 
@@ -29,7 +29,7 @@
       });
 
       //Mostrar texto
-      TweenLite.to('.traducir', 0.5, { opacity: 1 });
+      TweenLite.to('.translate', 0.5, { opacity: 1 });
     });
   }
 
@@ -121,7 +121,7 @@
           //Declarar el comienzo del cambio de idioma
           g_changingLanguage = true;
 
-          TweenLite.to('.traducir', 0.25, { opacity: 0, onComplete: function() {
+          TweenLite.to('.translate', 0.25, { opacity: 0, onComplete: function() {
             translate(language)
           }});
 

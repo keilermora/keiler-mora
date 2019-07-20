@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+//Transiciones
+body,
+.theme-container,
+.swiper-pagination .swiper-pagination-bullet {
+  transition: background-color 1000ms;
+}
+
+.theme-text,
+.swiper-button-prev .fa,
+.swiper-button-next .fa {
+  transition: color 1000ms;
+}
+
+
+path,
+circle,
+g {
+  &.day,
+  &.night {
+    transition: fill 1000ms;
+  }
+}

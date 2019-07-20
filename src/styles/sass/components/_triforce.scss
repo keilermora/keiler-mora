@@ -1,9 +1,10 @@
-#svg-triforce {
-  @include transition(opacity, .5s);
+@charset "UTF-8";
 
+#svg-triforce {
   cursor: pointer;
   height: 2em;
   opacity: 0.6;
+  transition: opacity 500ms;
   width: 2em;
 
   position: absolute;

@@ -1,7 +1,3 @@
-// helpers
-@import "helpers/mixins";
-@import "helpers/variables";
-
 // components
 @import "components/a";
 @import "components/body";
@@ -11,9 +7,12 @@
 @import "components/navbar";
 @import "components/p";
 @import "components/swiper";
-@import "components/toast";
 @import "components/triforce";
 
 // layouts
-@import "layouts/horario";
 @import "layouts/index";
+
+// themes
+@import "themes/base";
+@import "themes/day";
+@import "themes/night";

@@ -1,10 +1,11 @@
+@charset "UTF-8";
+
 button {
-  @include transition(background-color, 0.5s);
+  transition: background-color 500ms;
   background-color: #0288d1 !important;
   margin-top: 1em;
 
   &:hover {
-
     background-color: #fff !important;
     color: #0288d1 !important;
   }
