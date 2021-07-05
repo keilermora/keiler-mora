@@ -1,14 +1,10 @@
 # Keiler Mora
-[keilermora.dualemento.com](http://keilermora.dualemento.com)
-
-Segunda versión web de mi currículum vitae. Ha pasado aproximadamente dos años desde que desarrollé la primera versión, es por ello que requería una actualización.
 
 ### Cambios con la versión anterior
 
 * Debido a la popularidad de `Bootstrap`, se decidió reemplazar el framework `Materialize CSS` con éste.
 * El formato de los logos de la sección Conocimientos pasaron a tener el formato `.svg`.
 * El plugin `jQueryUI` fue reemplazado por `GSAP` para realizar las animaciones. Gracias a ello, se mejoró considerablemente la fluidés de las animaciones en el sitio web.
-* El sitio web ahora detecta el idioma del navegador y la hora del servidor antes de mostrar el contenido de la página, en lugar de hacerlo vía script.
 * Se sustituyó el manejador de dependencias Bower por Yarn, según lo recomendado en el [blog oficial de Bower.io](https://bower.io/blog/2017/how-to-migrate-away-from-bower/).
 
 ### Dependencias del proyecto
